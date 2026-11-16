@@ -1,0 +1,23 @@
+name: default
+description: ""
+config:
+  packages:
+    apt: [python3, openssl, curl]
+    brew: [python3, openssl, curl]
+  networking:
+    type: unrestricted
+  env:
+    - name: GOOGLE_SERVICE_ACCOUNT_JSON
+      purpose: 任意。Search ConsoleとGA4を読むサービスアカウントの鍵（JSONまたはbase64）
+    - name: GSC_SITE_URL
+      purpose: 任意。Search Consoleのプロパティ。例 sc-domain:example.com
+    - name: GA4_PROPERTY_ID
+      purpose: 任意。GA4のプロパティID（数字）。記事に来た人のその後の行動と、AIのサービスからの訪問を取る
+    - name: DATAFORSEO_LOGIN
+      purpose: 任意。DataForSEOのAPIログイン。検索数・クリック単価・AIによる概要の引用元を取る
+    - name: DATAFORSEO_PASSWORD
+      purpose: 任意。DataForSEOのAPIパスワード
+    - name: RAKKO_API_KEY
+      purpose: 任意。ラッコキーワードのAPIキー。検索数・質問文・AIによる概要に載っている問いを取る
+    - name: AHREFS_API_KEY
+      purpose: 任意。AhrefsのAPIキー。検索数・推移・難易度を取る

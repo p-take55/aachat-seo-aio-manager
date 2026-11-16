@@ -54,7 +54,7 @@ SECTIONS = {
         "panel": array({"id": "string", "question": "string"}),
         "log": array({"date": "date", "engine": "string", "question_id": "string", "cited": nullable("boolean"), "mentioned?": nullable("boolean"), "overview?": nullable("boolean"), "sources?": array("string")}),
     },
-    "articles": array({"title": "string", "url": "string", "published_on": "date", "keyword": "string", "clicks": nullable("number"), "impressions": nullable("number"), "position": nullable("number"), "ai_cited": nullable("boolean"), "verdict": enum("効いている", "あと一歩", "別の問いで出ている", "出ていない", "まだ早い")}),
+    "articles": array({"title": "string", "url": nullable("string"), "published_on": nullable("date"), "keyword": "string", "clicks": nullable("number"), "impressions": nullable("number"), "position": nullable("number"), "ai_cited": nullable("boolean"), "verdict": nullable(enum("効いている", "あと一歩", "別の問いで出ている", "出ていない", "まだ早い")), "state?": enum("brief", "draft", "in_review", "published")}),
     "readiness": {"checked_on": "date", "items": array({"level": enum("stop", "improve", "optional"), "title": "string", "state": enum("open", "done"), "note": nullable("string")})},
 }
 

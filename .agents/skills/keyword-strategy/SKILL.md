@@ -6,7 +6,7 @@ metadata:
   aachat.headline.en: Decide target themes and the article structure
   aachat.description.ja: 事業の概要から、狙うテーマ 3〜5 本、避けるテーマ、柱の記事と関連の記事の組み方を決め、人間の承認を求める。
   aachat.description.en: From the business profile, decide three to five target themes, themes to avoid, and the pillar and related article structure, then ask for human approval.
-  aachat.discovery.listed: "true"
+  aachat.discovery.listed: "false"
 ---
 
 # キーワード戦略を作る
@@ -19,8 +19,8 @@ metadata:
 
 ## 2. テーマごとに確かめる
 
-- **需要**: 代表的な問いを 3 つ挙げ、`keyword-evidence` で検索の有無を見る。
-- **競争**: 代表的な問い 1〜2 つを `ai-citation-check` で見る。上位と AI の引用を、大手メディアや公式が埋めているか、個人の記事や古い記事が残っているか。
+- **需要**: 代表的な問いを 3 つ挙げ、`keyword-evidence` で検索の有無を見る。この skill が無いときは、検索のサジェストに出るかと、検索結果にその問いに答える記事があるかで見当を付け、推測だと書く。
+- **競争**: 代表的な問い 1〜2 つを `ai-citation-check` で見る。この skill が無いときは、Web 検索で上位を読む。上位と AI の引用を、大手メディアや公式が埋めているか、個人の記事や古い記事が残っているか。
 - **勝てる理由**: 事業の概要の「自社だけの根拠」のどれを使うか。
 - **事業への近さ**: 読んだ人が製品を検討する段階にどれだけ近いか。
 

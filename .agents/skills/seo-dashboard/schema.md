@@ -66,10 +66,12 @@
   },
 
   "articles": [ {
-    "title": "〈記事の題〉", "url": "https://example.com/blog/…", "published_on": "2026-11-20",
+    "title": "〈記事の題〉",
+    "state": "published",                        // "brief"（概要あり）| "draft"（原稿あり）| "in_review"（確認中）| "published"（公開済み）。省くと公開済み
+    "url": "https://example.com/blog/…", "published_on": "2026-11-20",   // 公開前は null
     "keyword": "〈狙った言い方〉",
     "clicks": 0, "impressions": 0, "position": null, "ai_cited": null,
-    "verdict": "まだ早い"                         // "効いている" | "あと一歩" | "別の問いで出ている" | "出ていない" | "まだ早い"（seo-results-review の区分）
+    "verdict": "まだ早い"                         // "効いている" | "あと一歩" | "別の問いで出ている" | "出ていない" | "まだ早い"（seo-results-review の区分）。公開前は null
   } ],
 
   "readiness": {

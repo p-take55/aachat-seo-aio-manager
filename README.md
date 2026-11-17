@@ -22,6 +22,8 @@
 
 状況と数字は、Project HTML の画面（`seo-dashboard.html`）で見られます。検索の実績の推移、キーワードの候補、AI による概要に引用されているサイト、サイトの対応状況が、グラフで並びます。
 
+検索数、クリック単価、問いごとの検索結果と引用元、Search Console の日ごとの数字、使った額は、Project のデータベースにためます。取った数字が消えず、同じ語を取り直さずに済み、画面はデータベースを直接読みます。データベースが使えない Project では、文書に残す形で動きます。
+
 ## 測れること、測れないこと
 
 | | 測れるか | 要るもの |
@@ -146,19 +148,20 @@ Project に参加させて、依頼します。今どの段階かは Agent が P
 | 記事の原稿 | サイトの repo の作業ブランチ（repo が無ければ `docs/drafts/`） |
 | 選んだ問い・受け入れの判断・結果の記録 | `docs/seo-log.md` |
 | AI での見え方 | `docs/ai-visibility-panel.md`、`docs/ai-visibility-log.md` |
+| たまっていく数字（キーワード、検索結果と引用元、日ごとの検索の数字、使った額） | Project のデータベース（`seo_` で始まる 5 つの表） |
 | 人間が見る画面 | Project HTML の `seo-dashboard.html` |
 
 ## 中身
 
 - `identity.md`: 役割と、守ること
-- `.agents/skills/`: 16 本
+- `.agents/skills/`: 17 本
   - 進め方: `seo-aio-playbook`（一巡の段階、今どこにいるかの見分け方、文書の置き場所、判断の基準）
   - 準備: `seo-setup`、`seo-data-connect`
   - 土台: `seo-business-research`、`site-readiness-audit`
   - 戦略と企画: `keyword-strategy`、`keyword-discovery`、`keyword-evidence`、`ai-citation-check`
   - 記事: `article-brief`、`article-writing`、`article-acceptance-check`
   - 計測: `seo-results-review`、`ai-visibility-tracking`
-  - 共通: `seo-data-sources`（データ源の選び方とスクリプト）、`seo-dashboard`（状況と数字を 1 枚の画面にする）
+  - 共通: `seo-data-sources`（データ源の選び方とスクリプト）、`seo-database`（数字を Project のデータベースにためる）、`seo-dashboard`（状況と数字を 1 枚の画面にする）
 - `environment.yaml`: 実行環境と、任意の環境変数の宣言
 - `knowledge/`: Agent が、会社をまたいで役に立つ学びを書き足す場所。最初は空です
 
